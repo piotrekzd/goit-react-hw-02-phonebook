@@ -14,17 +14,13 @@ export class App extends React.Component {
       { id: 'id-4', name: 'Annie Copeland', number: '227-91-26' },
     ],
     filter: '',
+    name: '',
+    number: '', 
   };
 
   handleChange = e => {
     const { name, value } = e.target;
     this.setState({ [name]: value });
-  };
-
-  handleDelete = e => {
-    this.setState(prevState => ({
-      contacts: prevState.contacts.filter(contact => contact.id !== e),
-    }));
   };
 
   add = ({ name, number }) => {
@@ -45,6 +41,12 @@ export class App extends React.Component {
 
     this.setState(prevState => ({
       contacts: prevState.contacts.concat(newContact),
+    }));
+  };
+
+  handleDelete = e => {
+    this.setState(prevState => ({
+      contacts: prevState.contacts.filter(contact => contact.id !== e),
     }));
   };
 
