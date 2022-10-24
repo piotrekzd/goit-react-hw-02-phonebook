@@ -1,0 +1,36 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.input {
+    margin-bottom: 20px;
+    width: 200px;
+    padding: 8px;
+    border-color: rgb(143, 100, 146);
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.btn {
+    width: 150px;
+    margin: 0 auto;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: lightblue;
+    color: white;
+    font-size: 18px;
+    transition: all 500ms ease;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: azure;
+    color: black;
+    box-shadow: 5px 5px 5px rgb(85, 84, 84);
+
+}
