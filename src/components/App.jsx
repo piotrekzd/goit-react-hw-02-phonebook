@@ -3,6 +3,7 @@ import { ContactForm } from './ContactForm/ContactForm';
 import { Filter } from './Filter/Filter';
 import { ContactList } from './ContactList/ContactList';
 import { nanoid } from 'nanoid';
+import style from 'App.module.css';
 
 
 export class App extends React.Component {
@@ -30,7 +31,7 @@ export class App extends React.Component {
 
     const newContact = { id: nanoid(), name: name, number: number };
 
-    contacts.forEach(contact => {
+    contacts.forEach(contact => { 
       if (contact.name.toLowerCase() === lowerCase) {
         alert(`${contact.name} is already in contacts`);
         onList = true;
@@ -41,12 +42,6 @@ export class App extends React.Component {
 
     this.setState(prevState => ({
       contacts: prevState.contacts.concat(newContact),
-    }));
-  };
-
-  handleDelete = e => {
-    this.setState(prevState => ({
-      contacts: prevState.contacts.filter(contact => contact.id !== e),
     }));
   };
 
@@ -61,11 +56,17 @@ export class App extends React.Component {
     );
   };
 
+  deleteContact = idToDelete => {
+    this.setState(prevState => ({
+      contacts: prevState.contacts.filter(contact => contact.id !== idToDelete),
+    }));
+  };  
+
   render() {
     const { filter } = this.state;
     return (
       <div>
-        <h1>Phonebook</h1>
+        <h1 className={style.header}>Phonebook</h1>
         <ContactForm onSubmit={this.add} />
         <Filter value={filter} onChange={this.handleChangeFilter} />
         <ContactList

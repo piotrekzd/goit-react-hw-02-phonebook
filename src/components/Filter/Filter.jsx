@@ -3,7 +3,7 @@ import style from './Filter.module.css'
 
 export const Filter = ({ value, onChange }) => {
     return (
-        <label>Find contacts by name
+        <label className={style.label}>Find contacts by name
             <input className={style.input}
                 type='name'
                 value={value}

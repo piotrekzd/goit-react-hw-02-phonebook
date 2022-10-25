@@ -1,4 +1,5 @@
 .form {
+    margin-left: 20px;
     display: flex;
     flex-direction: column;
     max-width: 400px;
@@ -16,21 +17,18 @@
 }
 
 .btn {
-    width: 150px;
-    margin: 0 auto;
+    width: 120px;
     padding: 10px;
     border: none;
     border-radius: 5px;
     background-color: lightblue;
-    color: white;
+    color: black;
     font-size: 18px;
     transition: all 500ms ease;
     cursor: pointer;
 }
 
 .btn:hover {
-    background-color: azure;
-    color: black;
     box-shadow: 5px 5px 5px rgb(85, 84, 84);
 
 }
