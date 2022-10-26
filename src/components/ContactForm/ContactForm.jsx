@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { nanoid } from 'nanoid';
 import style from './ContactForm.module.css';
 
@@ -9,7 +9,7 @@ const INITIAL_STATE = {
     number: ''
 };
 
-export class ContactForm extends React.Component {
+export class ContactForm extends Component {
     state = { ...INITIAL_STATE };
     id = nanoid();
 
